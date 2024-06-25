@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Допомога тваринам</title>
+</head>
+<body>
+    <h1>Запити про допомогу</h1>
+    <table border="1">
+        <tr>
+            <th>Ім'я користувача</th>
+            <th>Ім'я</th>
+            <th>Номер телефону</th>
+            <th>Нікнейм Telegram</th>
+            <th>Опис</th>
+            <th>Час</th>
+        </tr>
+        {% for request in requests %}
+        <tr>
+            <td>{{ request[0] }}</td>
+            <td>{{ request[1] }}</td>
+            <td>{{ request[2] }}</td>
+            <td>{{ request[3] }}</td>
+            <td>{{ request[4] }}</td>
+            <td>{{ request[5] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    
+    <h1>Пропозиції допомоги</h1>
+    <table border="1">
+        <tr>
+            <th>Ім'я користувача</th>
+            <th>Ім'я</th>
+            <th>Номер телефону</th>
+            <th>Нікнейм Telegram</th>
+            <th>Опис</th>
+            <th>Час</th>
+        </tr>
+        {% for offer in offers %}
+        <tr>
+            <td>{{ offer[0] }}</td>
+            <td>{{ offer[1] }}</td>
+            <td>{{ offer[2] }}</td>
+            <td>{{ offer[3] }}</td>
+            <td>{{ offer[4] }}</td>
+            <td>{{ offer[5] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
